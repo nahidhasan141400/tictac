@@ -1,0 +1,104 @@
+@import "../../comstyle.scss";
+
+footer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: $gray;
+  .foot-container {
+    padding: 20px 0px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    @media (max-width: 824px) {
+      grid-template-columns: 1fr;
+    }
+    .one {
+      @media (max-width: 824px) {
+        margin-bottom: 40px;
+      }
+      h1 {
+        font-size: 35px;
+        padding-bottom: 10px;
+        @media (max-width: 824px) {
+          font-size: 25px;
+        }
+      }
+      h2 {
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 4px;
+        color: rgb(255, 207, 248);
+        @media (max-width: 824px) {
+          font-size: 17px;
+        }
+      }
+      p {
+        font-size: 17px;
+        color: rgb(255, 207, 248);
+        @media (max-width: 824px) {
+          font-size: 15px;
+        }
+        a {
+          text-decoration: none;
+          font-size: 17px;
+          color: rgb(255, 207, 248);
+          @media (max-width: 824px) {
+            font-size: 15px;
+          }
+          &:hover {
+            color: $secondery;
+          }
+        }
+      }
+    }
+    .tow {
+      h1 {
+        font-size: 35px;
+        padding-bottom: 10px;
+        @media (max-width: 824px) {
+          font-size: 25px;
+        }
+      }
+      ol {
+        list-style: none;
+        li {
+          margin: 5px 0;
+          a {
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(255, 207, 248);
+            @media (max-width: 824px) {
+              font-size: 16px;
+            }
+
+            font-weight: 600;
+            &:hover {
+              color: $secondery;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(211deg, rgb(168, 60, 154), rgba(56, 32, 57, 1));
+    color: white;
+  }
+  h1 {
+    font-size: 20px;
+    @media (max-width: 824px) {
+      font-size: 12px;
+    }
+    a {
+      text-decoration: none;
+      color: rgb(255, 227, 253);
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "../../comstyle.scss";
+
+.Ach {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background: linear-gradient(
+    45deg,
+    rgba(137, 84, 140, 0.43) 0%,
+    rgba(158, 124, 161, 0.423) 35%,
+    rgba(136, 52, 123, 0.401) 100%
+  );
+  color: $dark;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: 824px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    height: auto;
+  }
+}
+
+// game
+.game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 824px) {
+    padding: 20px 0px;
+  }
+  .game-frem {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    letter-spacing: 0;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .five-game {
+      border: 3px solid $secondery;
+    }
+    .one-game {
+      border-right: 3px solid $secondery;
+      border-bottom: 3px solid $secondery;
+    }
+    .three-game {
+      border-left: 3px solid $secondery;
+      border-bottom: 3px solid $secondery;
+    }
+    .seven-game {
+      border-right: 3px solid $secondery;
+      border-top: 3px solid $secondery;
+    }
+    .nine-game {
+      border-left: 3px solid $secondery;
+      border-top: 3px solid $secondery;
+    }
+  }
+}
+.achivment {
+  width: 100%;
+  height: 100%;
+  color: white;
+  .gameS {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      @media (max-width: 824px) {
+        font-size: 25px;
+      }
+    }
+    p {
+      font-size: 20px;
+      @media (max-width: 824px) {
+        font-size: 17px;
+      }
+    }
+  }
+}

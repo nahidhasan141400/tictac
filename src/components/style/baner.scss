@@ -1,0 +1,262 @@
+@import "../../comstyle.scss";
+
+.hero-benar {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: $papergraf;
+  background-color: $dark;
+  overflow: hidden;
+  .titel-name {
+    font-family: sans-serif;
+    font-size: 70px;
+    -webkit-text-stroke: 1px $secondery;
+    color: transparent;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 824px) {
+      font-size: 35px;
+    }
+  }
+  h2 {
+    font-family: "Square Peg", cursive;
+    color: white;
+    font-size: 80px;
+    height: 25px;
+    position: relative;
+    font-weight: 100;
+    top: -65px;
+    z-index: 0;
+    @media (max-width: 824px) {
+      font-size: 40px;
+      top: -30px;
+    }
+  }
+  .titel-name:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: "NAHID HASAN";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      transparent 3%,
+      #00e6f6 3%,
+      #00e6f6 5%,
+      #ff013c 5%
+    );
+    text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+    clip-path: var(--slice-0);
+  }
+  .titel-name:hover {
+    text-shadow: 0 0 20px #ff96f1, 0 0 50px #f863e4, 0 0 75px #ff4de7,
+      0 0 90px #b331a4;
+    -webkit-text-stroke: 1px #ffcff9;
+  }
+  .titel-name:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+
+  .defination {
+    max-width: 700px;
+    margin: 20px;
+    line-height: 25px;
+    word-spacing: 3px;
+    text-align: center;
+    font-size: 20px;
+    color: #945193;
+    @media (max-width: 824px) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+
+/* CSS button*/
+.btn-glitch,
+.btn-glitch:after {
+  padding: 10px 30px;
+  font-size: 20px;
+  text-decoration: none;
+  background: linear-gradient(45deg, transparent 5%, $secondery 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  @media (max-width: 824px) {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+}
+
+.btn-glitch:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: "NAHID HASAN";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #ff013c 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.btn-glitch:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+.x {
+  width: 100%;
+  height: 2px;
+  background: #f765ff76;
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+}
+.x:hover {
+  background: #f8f005;
+}
+.y {
+  width: 2px;
+  height: 100%;
+  background: #aa39b076;
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+}
+.y:hover {
+  background: #ff013c;
+}
+.social-link {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  height: 230px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  // background: rgba(189, 16, 224, 0.054);
+  backdrop-filter: blur(4px);
+  box-shadow: 5px 8px 15px 0 rgba(31, 38, 135, 0.148),
+    2px 2px 5px rgba(45, 53, 159, 0.126),
+    inset 2px 2px 3px rgba(199, 67, 226, 0.143),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.34);
+
+  @media (max-width: 824px) {
+    bottom: 30px;
+    height: 40px;
+    width: 170px;
+    flex-direction: row;
+  }
+
+  .per-link {
+    text-decoration: none;
+    color: $secondery;
+    font-size: 25px;
+    position: relative;
+    @media (max-width: 824px) {
+      font-size: 17px;
+    }
+  }
+  .per-link:hover {
+    color: 1px #ffcff9;
+  }
+}
+.social-link::after {
+  content: "";
+  position: absolute;
+  background: $secondery;
+  width: 2px;
+  height: 150px;
+  bottom: -65%;
+  @media (max-width: 824px) {
+    width: 100px;
+    height: 2px;
+    bottom: 0px;
+  }
+}

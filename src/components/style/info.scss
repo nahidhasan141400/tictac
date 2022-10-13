@@ -1,0 +1,178 @@
+@import "../../comstyle.scss";
+.info-section2 {
+  width: 100%;
+  height: 200px;
+  background: $gray;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 824px) {
+    height: 200px;
+  }
+}
+
+// backgraound circle
+.bgCer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.cercel-1,
+.cercel-2,
+.cercel-3,
+.cercel-4 {
+  border-radius: 50%;
+  background: linear-gradient(
+    305deg,
+    rgba(90, 61, 92, 1) 0%,
+    rgba(246, 56, 220, 1) 100%
+  );
+  position: absolute;
+}
+
+.cercel-1 {
+  width: 170px;
+  height: 170px;
+  right: -30px;
+  top: -20px;
+  @media (max-width: 824px) {
+    width: 90px;
+    height: 90px;
+    top: -10px;
+  }
+}
+.cercel-2 {
+  width: 100px;
+  height: 100px;
+  top: 120px;
+  right: 300px;
+  @media (max-width: 824px) {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+  }
+}
+
+.cercel-3 {
+  width: 80px;
+  height: 80px;
+  top: 80px;
+  left: 270px;
+  @media (max-width: 824px) {
+    width: 70px;
+    height: 70px;
+    top: 120px;
+  }
+}
+.cercel-4 {
+  width: 180px;
+  height: 180px;
+  bottom: -40px;
+  left: -50px;
+  @media (max-width: 824px) {
+    width: 100px;
+    height: 100px;
+    left: -40px;
+  }
+}
+
+///info2
+.info2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  @media (max-width: 824px) {
+    grid-template-columns: 1fr;
+  }
+}
+.api {
+  margin: auto;
+  width: 300px;
+  height: 100px;
+  background: rgba(216, 86, 207, 0.123);
+  backdrop-filter: blur(5px);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.335),
+    10px 10px 30px rgba(205, 20, 205, 0.247),
+    inset 2px 2px 8px rgba(255, 169, 251, 0.227),
+    inset -2px -2px 5px rgba(112, 112, 112, 0.227);
+  transition: all 0.5s ease-in-out;
+  @media (max-width: 824px) {
+    position: absolute;
+    background: transparent;
+    backdrop-filter: blur(0px);
+    box-shadow: none;
+    top: 2px;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+  }
+
+  .city {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 824px) {
+      font-size: 17px;
+    }
+    img {
+      height: 45px;
+      margin-right: 5px;
+      filter: drop-shadow(2px 2px 10px rgb(172, 255, 255));
+      @media (max-width: 824px) {
+        height: 25px;
+      }
+    }
+  }
+  .tem {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    @media (max-width: 824px) {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    span {
+      padding: 5px;
+    }
+  }
+}
+.api:hover {
+  border: 1px solid cyan;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.491),
+    3px 3px 20px rgba(91, 255, 255, 0.558),
+    inset 0 0 15px rgba(24, 255, 255, 0.634);
+}
+
+.start-buttton {
+  margin: auto;
+  width: 350px;
+  height: 120px;
+  background: rgba(216, 86, 207, 0.123);
+  backdrop-filter: blur(7px);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.335),
+    10px 10px 30px rgba(205, 20, 205, 0.247),
+    inset 2px 2px 8px rgba(255, 169, 251, 0.227),
+    inset -2px -2px 5px rgba(112, 112, 112, 0.227);
+
+  h1 {
+    padding-bottom: 15px;
+  }
+}
